@@ -18,5 +18,9 @@ class TestEmotionDetector(unittest.TestCase):
         response5 = emotion_detector("I am really afraid that this will happen")
         self.assertEqual(response5['dominant_emotion'], "fear")
 
+    def test_successful_response(self):
+        response1 = emotion_detector("I")
+        self.assertEqual(response1['dominant_emotion'], None)
+
 
 unittest.main()
